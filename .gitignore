@@ -19,6 +19,7 @@ project.xcworkspace
 dependency-reduced-pom.xml
 interpolated*.xml
 settings.xml
+vcs.xml
 
 build.log
 npm-debug.log
@@ -30,6 +31,7 @@ local.properties
 overridedb.*
 
 *.iml
+*.xml
 *.ipr
 *.iws
 *.pbxuser
