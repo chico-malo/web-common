@@ -9,7 +9,7 @@ export default class {
      * @param obj 对象或者数组
      * @returns {any}
      */
-    static clone(obj: any) {
+    static clone(obj) {
         return JSON.parse(JSON.stringify(obj));
     }
 }
