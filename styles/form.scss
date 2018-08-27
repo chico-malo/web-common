@@ -1,0 +1,50 @@
+/**
+ * Copyright: Copyright (C) 2018 sitb.software,All Rights Reserved
+ * author: yangyao(873241789@qq.com)
+ * date: 2018/8/24
+ */
+@import "common";
+
+form {
+  /*正常封装的form样式*/
+  .form-section {
+    position: relative;
+    margin: 10px 0;
+    border-radius: 5px;
+    overflow: hidden;
+    .form-label {
+      position: absolute;
+      right: 80%;
+      display: inline-block;
+      text-align: right;
+      line-height: 40px;
+      font-size: 14px;
+      color: #333;
+    }
+    .form-input {
+      padding-left: 75px;
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      color: $font-color-2;
+    }
+  }
+  /*radio form布局*/
+  .form-section-radio {
+    display: flex;
+    margin: 10px 0;
+    .form-title-radio {
+      width: 45%;
+      margin-right: 30px;
+      text-align: right;
+      font-size: 18px;
+    }
+    .form-section-input {
+      vertical-align: middle;
+    }
+    .form-label-radio {
+      vertical-align: middle;
+      font-size: 16px;
+    }
+  }
+}
