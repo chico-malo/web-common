@@ -3,13 +3,14 @@
  * author: yangyao(873241789@qq.com)
  * date: 2018/8/10
  */
+import 'whatwg-fetch'
 
 /**
  * ajax请求
  * @param {any} url 请求地址
  * @param {any} method 请求方式
  * @param {any} headers 自定义header
- * @param {any} other 
+ * @param {any} other
  * @returns {any}
  * @constructor
  */
