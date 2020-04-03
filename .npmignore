@@ -1,26 +1,13 @@
-# OSX
-#
-.DS_Store
-
-# WebStorm
-#
-.idea
-*.iml
-
-# node.js
-#
-node_modules/
-npm-debug.log
-yarn-error.log
-
-# project
-.editorconfig
+/.git/
+/.vscode/
+/node_modules/
+/src/
 .gitignore
-.flowconfig
-.watchmanconfig
-
-Examples
-*.ts
+.npmignore
+.prettierrc
+.editorconfig
+tslint.json
+tsconfig.json
+note.md
+*.log
 *.tsx
-*.js.map
-!*.d.ts

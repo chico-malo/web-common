@@ -1,9 +1,5 @@
-/**
- * Copyright: Copyright (C) 2018 sitb.software,All Rights Reserved
- * author: yangyao(873241789@qq.com)
- * date: 2018/8/13
- */
-export default {
+
+const pattern = {
     /**
      * 邮箱
      */
@@ -12,4 +8,6 @@ export default {
      * 手机号
      */
     phone: /^[1][3,4,5,7,8][0-9]{9}$/
-};
+}
+
+export default pattern;
