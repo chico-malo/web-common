@@ -1,12 +1,12 @@
 {
-  "name": "yoyo-web-common",
-  "version": "1.0.5",
+  "name": "ray-web-common",
+  "version": "0.0.5",
   "main": "index.js",
   "repository": "https://github.com/chico-malo/web-common",
   "author": "yangyao <873241789@qq.com>",
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf *.d.ts *.js *.js.map **/*.d.ts **/*.js **/*.js.map",
+    "clean": "rm -rf *.map",
     "build": "tsc -d",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"
@@ -20,12 +20,17 @@
     "lint"
   ],
   "devDependencies": {
+    "@types/react": "^16.9.35",
     "prettier": "^2.0.2",
     "tslint": "^6.1.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "pre-commit": "^1.2.2"
+    "antd": "^4.2.5",
+    "axios": "^0.19.2",
+    "pre-commit": "^1.2.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
