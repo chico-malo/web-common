@@ -6,8 +6,8 @@
   "author": "yangyao <873241789@qq.com>",
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf *.map",
-    "build": "tsc -d",
+    "clean": "find . -path \"./node_modules\" -o -name \"*.js.map\" -o -name \"*.d.ts.map\" |xargs rm -f | echo ''",
+    "build": "rm -rf lib && tsc -d",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"
   },
