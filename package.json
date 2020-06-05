@@ -1,13 +1,13 @@
 {
   "name": "ray-web-common",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "index.js",
   "repository": "https://github.com/chico-malo/web-common",
   "author": "yangyao <873241789@qq.com>",
   "license": "MIT",
   "scripts": {
     "clean": "find . -path \"./node_modules\" -o -name \"*.js.map\" -o -name \"*.d.ts.map\" |xargs rm -f | echo ''",
-    "build": "yarn clean && rm -rf lib && tsc -d",
+    "build": "rm -rf lib && tsc -d  && yarn clean",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"
   },
