@@ -1,4 +1,3 @@
-
 const pattern = {
     /**
      * 邮箱
@@ -7,7 +6,7 @@ const pattern = {
     /**
      * 手机号
      */
-    phone: /^[1][3,4,5,7,8][0-9]{9}$/
+    phone: /^[1][3,4,5,7,8][0-9]{9}$/,
 }
 
-export default pattern;
+export default pattern

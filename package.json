@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "find . -path \"./node_modules\" -o -name \"*.js.map\" -o -name \"*.d.ts.map\" |xargs rm -f | echo ''",
-    "build": "rm -rf lib && tsc -d",
+    "build": "yarn clean && rm -rf lib && tsc -d",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"
   },
@@ -20,6 +20,7 @@
     "lint"
   ],
   "devDependencies": {
+    "@types/object-path": "^0.11.0",
     "@types/react": "^16.9.35",
     "prettier": "^2.0.2",
     "tslint": "^6.1.1",
@@ -29,6 +30,7 @@
   "dependencies": {
     "antd": "^4.2.5",
     "axios": "^0.19.2",
+    "object-path": "^0.11.4",
     "pre-commit": "^1.2.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

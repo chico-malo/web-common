@@ -30,7 +30,7 @@ export class LocalStorageService {
         const defaultString: any = JSON.stringify(data)
         const defaultCompile: any = this.compileStr(defaultString)
         localStorage.setItem(key, defaultCompile)
-    };
+    }
 
     // get方法
     static getStorage(key: string): boolean | any {
@@ -40,6 +40,5 @@ export class LocalStorageService {
             return JSON.parse(defaultUnCompile)
         }
         return false
-    };
+    }
 }
-
