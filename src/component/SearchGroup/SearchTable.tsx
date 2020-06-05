@@ -4,10 +4,10 @@
  * date: 2020-05-27
  */
 import * as React from 'react'
-import { Alert, Button, Card, Popconfirm, Row, Space, Table } from 'antd'
+import { Alert, Button, Card, Popconfirm, Space, Table } from 'antd'
 import { TableProps } from 'antd/es/table'
 import { CardProps } from 'antd/lib/card'
-import { lang } from '~/locales/zh-en'
+import { lang } from '../../locales/zh-en'
 
 export interface SearchTableProps extends TableProps<any> {
     actionProps?: any;

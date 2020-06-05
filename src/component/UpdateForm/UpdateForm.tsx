@@ -5,12 +5,12 @@
  * 新增编辑表单
  */
 import * as React from 'react'
-import { Button, Form, Row, Space, Input } from 'antd'
-import { lang } from '~/locales/zh-en'
+import { Button, Form, Row, Space } from 'antd'
 import { FormInstance } from 'antd/es/form'
-import { ConfigProps, RayFormItem, DynamicFormProps } from '~/component/Form'
 import { FormProps } from 'antd/lib/form'
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons'
+import { ConfigProps, DynamicFormProps, RayFormItem } from '../Form'
+import { lang } from '../../locales/zh-en'
 
 // @ts-ignore
 export interface UpdateFormProps extends FormProps {

@@ -17,7 +17,7 @@ export interface ConfigItemProps extends FormItemProps {
     key?: string | number,
     children?: any,
     name: any,
-    fieldKey: any
+    fieldKey?: any
 }
 
 export interface DynamicFormProps {

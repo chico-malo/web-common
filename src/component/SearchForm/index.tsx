@@ -6,8 +6,8 @@
 import React, { useState } from 'react'
 import { Button, Card, Col, Form, Row } from 'antd'
 import { DownOutlined, UpOutlined } from '@ant-design/icons'
-import { lang } from '~/locales/zh-en'
 import { RayFormItem } from '../Form'
+import { lang } from '../../locales/zh-en'
 
 export interface SearchForm {
     fields?: any;
