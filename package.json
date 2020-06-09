@@ -1,6 +1,6 @@
 {
   "name": "ray-web-common",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "index.js",
   "repository": "https://github.com/chico-malo/web-common",
   "author": "yangyao <873241789@qq.com>",
