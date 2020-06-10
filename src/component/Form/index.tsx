@@ -9,7 +9,7 @@ import React from 'react'
 import { DatePicker, Form, Input } from 'antd'
 import { RayFormSelect } from './RayFormSelect'
 import { FormItemProps } from 'antd/lib/form'
-import objectPath from 'object-path';
+import objectPath from 'object-path'
 
 
 // @ts-ignore
@@ -45,43 +45,46 @@ export interface ConfigProps {
     config?: DynamicFormProps
 }
 
-export const RayFormItem = (config: ConfigProps) => {
-    const { itemProps = {}, inputProps, required = true } = config
+export const _renderFormItem = (config: ConfigProps) => {
+    const { renderType, inputProps, render, itemProps = {} } = config
     const label = objectPath.get(itemProps, 'label')
-    const message = `请输入您的${label}!`
-
     const newInputProps = {
         placeholder: label,
         ...inputProps,
     }
-
-    const _renderFormItem = () => {
-        const { renderType, render } = config
-        // 自定义render
-        if (render) {
-            return render(newInputProps)
-        }
-        // select下拉
-        if (renderType === 'select') {
-            return <RayFormSelect {...newInputProps}/>
-        }
-        // 年月日
-        if (renderType === 'date') {
-            return <DatePicker {...newInputProps}/>
-        }
-        // 密码
-        if (renderType === 'password') {
-            return <Input.Password {...newInputProps}/>
-        }
-        return <Input {...newInputProps}/>
+    // 自定义render
+    if (render) {
+        return render(newInputProps)
     }
+    // select下拉
+    if (renderType === 'select') {
+        return <RayFormSelect {...newInputProps}/>
+    }
+    // 年月日
+    if (renderType === 'date') {
+        return <DatePicker {...newInputProps}/>
+    }
+    // 密码
+    if (renderType === 'password') {
+        return <Input.Password {...newInputProps}/>
+    }
+    return <Input {...newInputProps}/>
+}
+
+export const RayFormItem = (config: ConfigProps) => {
+    const {
+        itemProps = {}, required = true,
+    }
+        = config
+    const label = objectPath.get(itemProps, 'label')
+    const message = `请输入您的${label}!`
 
     return (
         <Form.Item
             rules={[{ required, message, whitespace: true }]}
             {...itemProps}
         >
-            {_renderFormItem()}
+            {_renderFormItem(config)}
         </Form.Item>
     )
 }
