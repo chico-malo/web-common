@@ -8,10 +8,13 @@
 export class LocalStorageService {
     // 加密
     static compileStr(code: any) {
+        // charCodeAt截取第一个字符 与 字符长度的 Unicode编码，fromCharCode转换成字符串
         let c = String.fromCharCode(code.charCodeAt(0) + code.length)
+        // 然后依次把每一个元素跟它前一个字符的组合，转换成fromCharCode，再转成字符串
         for (let i = 1; i < code.length; i++) {
             c += String.fromCharCode(code.charCodeAt(i) + code.charCodeAt(i - 1))
         }
+        // 这个方法已弃用，后续把十六进制转换改掉
         return escape(c)
     }
 
